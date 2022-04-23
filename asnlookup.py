@@ -1,6 +1,11 @@
 import os
-import sys
+from os import system
 
+banner = """┌─┐┌─┐┌┐┌  ┬  ┌─┐┌─┐┬┌─┬ ┬┌─┐
+├─┤└─┐│││  │  │ ││ │├┴┐│ │├─┘
+┴ ┴└─┘┘└┘  ┴─┘└─┘└─┘┴ ┴└─┘┴
+"""
 
-name = input('┌─┐┌─┐┌┐┌  ┬  ┌─┐┌─┐┬┌─┬ ┬┌─┐\n├─┤└─┐│││  │  │ ││ │├┴┐│ │├─┘\n┴ ┴└─┘┘└┘  ┴─┘└─┘└─┘┴ ┴└─┘┴  \n\n➞ ')
-os.system('curl https://api.hackertarget.com/aslookup/?q=%s' % name)
+asn = input(banner + "\n➞ ")
+os.system(f'curl https://api.hackertarget.com/aslookup/?q=%s' % asn)
+print("\n\nHave a nice day!")
